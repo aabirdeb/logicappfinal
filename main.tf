@@ -20,9 +20,4 @@ resource "azurerm_virtual_network" "rgvnet" {
   resource_group_name = azurerm_resource_group.rg.name
 
 
-subnet {
-    name           = "subnet1"
-    address_prefix = "10.0.1.0/24"
-  }
-
   
