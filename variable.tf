@@ -14,3 +14,4 @@ variable "resource_group_name_prefix" {
 #comitment only done lasted file
 .
 s
+s
