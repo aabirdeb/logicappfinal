@@ -15,3 +15,4 @@ variable "resource_group_name_prefix" {
 .
 s
 s
+s
