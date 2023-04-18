@@ -1,8 +1,12 @@
-output "resource_group_name" {
-  value = azurerm_resource_group.rg.name
+output "logicapp_id" {
+  description = "The Log Analytics Workspace ID."
+  #for_each    = var.logic_app
+  #value = azurerm_logic_app_standard.this[*].id
+  value = values(azurerm_logic_app_standard.this)[*].id
 }
-
-
-#nice work
-#place all the outupt required in this project 
-#you have yo mention all the variables in the allocated resource otherwise a error will be placed in the module so be carefull what you do  in theis category
+output "logicapp_location" {
+  description = "The Portal URL for the Log Analytics Workspace"
+  #for_each    = var.logic_app
+  #value = azurerm_logic_app_standard.this[*].location
+  value = values(azurerm_logic_app_standard.this)[*].location
+}
