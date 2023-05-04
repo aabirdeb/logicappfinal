@@ -20,7 +20,8 @@ resource "azurerm_private_endpoint" "this" {
     = lookup(each.value, "storage_name")
   storage_account_access_key = lookup(each.value, "storage_primary_access_key")
 }
-
+resource "azurerm_app_service_virtual_network_swift_connection" "this" {
+  
 
   private_service_connection {
     is_manual_connection           = false
